@@ -8,8 +8,9 @@ jobs:
   ci:
     name: CI Job
     runs-on: ubuntu-latest
-    
-    permissions: write
+
+    permissions:
+     contents: write
     
     steps:
       - name: Checkout Code from Git Repo
