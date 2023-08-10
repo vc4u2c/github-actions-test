@@ -17,8 +17,6 @@ jobs:
     
      
       - name: Echo
-        env:
-          var1: 'test'
         run: |
           if ${var1} == 'test'; then
             echo "var2=testvar2" >> $GITHUB_ENV
@@ -28,3 +26,6 @@ jobs:
             echo $var2
           fi         
           gh variable set TestVariable -b 'TestVariableValue'
+        env:
+          var1: 'test'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
