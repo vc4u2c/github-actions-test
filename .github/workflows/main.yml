@@ -18,7 +18,7 @@ jobs:
      
       - name: Echo
         env:
-          var1: test
+          var1: 'test'
         run: |
           if ${var1} == 'test'; then
             echo "var2=testvar2" >> $GITHUB_ENV
