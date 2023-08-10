@@ -9,6 +9,8 @@ jobs:
     name: CI Job
     runs-on: ubuntu-latest
     
+    permissions: write-all
+    
     steps:
       - name: Checkout Code from Git Repo
         uses: actions/checkout@v3
@@ -18,14 +20,14 @@ jobs:
      
       - name: Echo
         run: |
-          if ${var1} == 'test'; then
+          if ${var1} == true; then
             echo "var2=testvar2" >> $GITHUB_ENV
             echo $var2
           else
-            echo "var2=nottest" >> $GITHUB_ENV
+            echo "var2=nottestvar2" >> $GITHUB_ENV
             echo $var2
           fi         
           gh variable set TestVariable -b 'TestVariableValue'
         env:
-          var1: 'test'
+          var1: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
