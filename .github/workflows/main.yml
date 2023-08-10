@@ -18,5 +18,7 @@ jobs:
      
       - name: Echo
         run: |
-         echo 'test' \
+         val = 'test'
+         echo $val
+         
          gh set variable TestVariable -b 'TestVariableValue'
