@@ -9,7 +9,7 @@ jobs:
     name: CI Job
     runs-on: ubuntu-latest
     
-    permissions: write-all
+    permissions: write
     
     steps:
       - name: Checkout Code from Git Repo
