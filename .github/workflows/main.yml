@@ -27,4 +27,4 @@ jobs:
             echo "var2=nottest" >> $GITHUB_ENV
             echo $var2
           fi         
-          gh set variable TestVariable -b 'TestVariableValue'
+          gh variable set TestVariable -b 'TestVariableValue'
